@@ -1,0 +1,39 @@
+,ITEM,PRICE,SALES,CLASS
+0,Kibbles XS,25,9,TSHIRT
+1,Kibbles S,25,0,TSHIRT
+2,Kibbles M,25,0,TSHIRT
+3,Kibbles L,25,0,TSHIRT
+4,Kibbles XL,25,2,TSHIRT
+5,Kibbles XXL,25,0,TSHIRT
+6,Kibbles XXXL,25,0,TSHIRT
+7,Profanar LaTumba XS,25,0,TSHIRT
+8,Profanar LaTumba S,25,0,TSHIRT
+9,Profanar LaTumba M,25,0,TSHIRT
+10,Profanar LaTumba L,25,0,TSHIRT
+11,Profanar LaTumba XL,25,0,TSHIRT
+12,Profanar LaTumba XXL,25,0,TSHIRT
+13,Profanar LaTumba XXXL,25,1,TSHIRT
+14,Pasadena 1995 XS,25,0,TSHIRT
+15,Pasadena 1995 S,25,1,TSHIRT
+16,Pasadena 1995 M,25,1,TSHIRT
+17,Pasadena 1995 L,25,0,TSHIRT
+18,Pasadena 1995 XL,25,0,TSHIRT
+19,Pasadena 1995 XXL,25,2,TSHIRT
+20,Pasadena 1995 XXXL,25,0,TSHIRT
+21,Other Bands Play CD,15,0,MUSIC
+22,Into Gay Pride CD,15,0,MUSIC
+23,A Knight At The Opera CD,15,0,MUSIC
+24,Tourmentone CD,15,0,MUSIC
+25,Stairway to Valhalla CD,15,0,MUSIC
+26,Italian Folk Metal CD,15,0,MUSIC
+27,Dislike to False Metal CD,15,0,MUSIC
+28,Other Bands Play LP,20,2,MUSIC
+29,Into Gay Pride LP,20,1,MUSIC
+30,A Knight At The Opera 2LP,20,0,MUSIC
+31,Tourmentone LP,20,0,MUSIC
+32,Stairway to Valhalla 2LP,25,1,MUSIC
+33,Italian Folk Metal LP,20,0,MUSIC
+34,Dislike to False Metal LP,25,1,MUSIC
+35,Patch LOGO,10,1,GADGET
+36,Sticker BOOMER,6,1,GADGET
+37,Bag CTHULHU,12,2,GADGET

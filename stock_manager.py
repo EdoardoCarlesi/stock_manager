@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
 import datetime
 import glob
 
@@ -12,7 +13,9 @@ def load_template(template_file):
         return _, False
 
 # TODO
-#def gen_template():
+def new_template(names, types, prices):
+    pass
+
 
 def gen_buttons(stock_data):
 
@@ -27,7 +30,6 @@ def gen_buttons(stock_data):
         col1, col2 = st.columns([3, 1])
         container = st.container()
 
-        keyplus = item 
         row_txt = item + ' ' + str(price)
         #st.number_input(row_txt, step=1)
 
@@ -35,7 +37,30 @@ def gen_buttons(stock_data):
             with col1:
                 st.write(row_txt)
             with col2:
-                st.number_input(row_txt, label_visibility="collapsed", key=item, step=1)       
+                quantity = st.number_input(row_txt, label_visibility="collapsed", key=item, step=1)       
+        
+        stock_data.at[i, 'SALES'] = quantity
+    
+    tot_sales = np.sum(stock_data['SALES'].values * stock_data['PRICE'].values)
+    stock_tshirt = stock_data['CLASS'] == "TSHIRT"
+    stock_gadget = stock_data['CLASS'] == "GADGET"
+    stock_music = stock_data['CLASS'] == "MUSIC"
+    tshirt_sales = np.sum(stock_data[stock_tshirt]['SALES'].values * stock_data[stock_tshirt]['PRICE'].values)
+    music_sales = np.sum(stock_data[stock_music]['SALES'].values * stock_data[stock_music]['PRICE'].values)
+    gadget_sales = np.sum(stock_data[stock_gadget]['SALES'].values * stock_data[stock_gadget]['PRICE'].values)
+
+    st.write('____________________')
+    tshirt_txt = f'\n\n\t\tSALES TSHIRTS:    {tshirt_sales}'
+    music_txt = f'\t\tSALES MUSIC:    {music_sales}'
+    gadget_txt = f'\t\tSALES GADGET:    {gadget_sales}'
+    tot_txt = f'\n\nSALES TOTAL:    {tot_sales}'
+
+    st.write(music_txt)
+    st.write(tshirt_txt)
+    st.write(gadget_txt)
+    st.write(tot_txt)
+    st.write('____________________\n\n')
+
 
 def gen_products():
 
@@ -66,37 +91,72 @@ def gen_products():
     st.write("Quantity:", quantity)
     st.write("Type:", product_type_selected)
 
-# Streamlit app title
-st.title("Tour Sales Management App")
+# Create a dictionary to store user credentials (for demonstration purposes)
+# In a real application, you should use a more secure method to store credentials.
+# TODO use env vars or hidden files
 
-# Initialize a dictionary to store the stock items for each day
-stock_data = {}
+def login():
 
-# Load an initial template if available
-template_path = "./templates/"
-save_path = './sales_record/'
+    user_credentials = {
+        'username': 'admin',
+        'password': 'password123'
+    }
 
-templates = glob.glob(f'{template_path}/*.csv')
-files_saved = glob.glob(f'{save_path}/*.csv')
+    # Streamlit app title
+    st.title("Login Page")
 
-temp_dict = dict() 
+    # Create input fields for username and password
+    username = st.text_input("Username")
+    password = st.text_input("Password", type="password")
 
-for temp in templates:
-    temp_dict[temp.split('_')[0].split('/')[-1].upper()] = temp 
+    # Check if the login button is clicked
+    if st.button("Login"):
+        # Check if the entered username and password match the stored credentials
+        if username == user_credentials['username'] and password == user_credentials['password']:
+            st.success("Logged in as {}".format(username))
+            
+            # Set a flag to indicate successful login
+            st.experimental_set_query_params(logged_in=True)
+        else:
+            st.error("Invalid username or password. Please try again.")
 
-template_name = st.selectbox("Select Template", temp_dict.keys())
+    return st.experimental_get_query_params().get('logged_in')
 
-if st.button("Load Template"):
+
+# Check if the user is logged in
+#logged_in = login()
+logged_in = True
+
+if logged_in: 
+
+    templates = glob.glob('templates/*.csv')
+    temp_dict = dict() 
+
+    for temp in templates:
+        temp_dict[temp.split('_')[0].split('/')[-1].upper()] = temp 
+
+    template_name = st.selectbox("Select Template", temp_dict.keys())
+
+    #if st.button("Load Template"):
     show_data = pd.read_csv(temp_dict[template_name])
-  
+    
+    if st.button("Clear"):
+        cols = ['ITEM', 'PRICE', 'SALES', 'CLASS']
+        show_data = pd.DataFrame()
+        for col in cols:
+            show_data[col] = 0        
+    
+
     gen_buttons(show_data)
 
+    files_saved = []
     now = datetime.datetime.now()
     year = now.strftime("%Y")
     month = now.strftime("%m")
     day = now.strftime("%d")
 
     city_name = st.text_input("City:")
+    save_path = "sales_record"
     value_default = f'{year}_{month}_{day}_{city_name}'
     #item_name = st.sidebar.text_input("File Name Save:", value=value_default)
 
@@ -105,13 +165,18 @@ if st.button("Load Template"):
         show_data.to_csv(save_file) 
         print(f'Saving to {save_file}')
 
+    #if st.button("Refresh Files"):
+    files_saved = glob.glob(f'{save_path}/*.csv')
+    
     if st.button("Refresh Files"):
         files_saved = glob.glob(f'{save_path}/*.csv')
 
-    saved_file = st.selectbox("Load File", files_saved)
-
+    if len(files_saved) > 1:
+        saved_file = st.selectbox("Load File", files_saved)
+    
     if st.button("Load Stock"):
         show_data = pd.read_csv(saved_file)    
         st.write(show_data)
         print(f'Loading  file: {saved_file}')
+
 

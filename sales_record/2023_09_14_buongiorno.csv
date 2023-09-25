@@ -1,0 +1,41 @@
+,ITEM,PRICE,SALES,TYPE
+0,Master Of Ikea XS,25,3, clothing
+1,Master Of Ikea S,25,0, clothing
+2,Master Of Ikea M,25,0, clothing
+3,Master Of Ikea L,25,0, clothing
+4,Master Of Ikea XL,25,1, clothing
+5,Master Of Ikea XXL,25,1, clothing
+6,Master Of Ikea XXXL,25,0, clothing
+7,Profanar La Tumba XS,25,0, clothing
+8,Profanar La Tumba S,25,0, clothing
+9,Profanar La Tumba M,25,0, clothing
+10,Profanar La Tumba L,25,0, clothing
+11,Profanar La Tumba XL,25,0, clothing
+12,Profanar La Tumba XXL,25,0, clothing
+13,Profanar La Tumba XXXL,25,3, clothing
+14,Pasadena 1995 XS,25,0, clothing
+15,Pasadena 1995 S,25,0, clothing
+16,Pasadena 1995 M,25,0, clothing
+17,Pasadena 1995 L,25,0, clothing
+18,Pasadena 1995 XL,25,0, clothing
+19,Pasadena 1995 XXL,25,0, clothing
+20,Pasadena 1995 XXXL,25,0, clothing
+21,Other Bands Play CD,15,0, clothing
+22,Into Gay Pride CD,15,0, music
+23,A Knight At The Opera CD,15,0, music
+24,Tourmentone CD,15,0, music
+25,Stairway to Valhalla CD,15,0, music
+26,Italian Folk Metal CD,15,0, music
+27,Dislike to False Metal CD,15,2, music
+28,Other Bands Play LP,20,0, music
+29,Into Gay Pride LP,20,0, music
+30,A Knight At The Opera LP,20,0, music
+31,Tourmentone LP,20,2, music
+32,Stairway to Valhalla 2LP,25,0, music
+33,Italian Folk Metal LP,20,0, music
+34,Dislike to False Metal LP,25,2, music
+35,Patch LOGO,5,0, gadgets
+36,Patch BOOMER,10,4, gadgets
+37,Poster,2,3, gadgets
+38,Pin,2,2, gadgets
+39,Shopper Bag,5,6, gadgets

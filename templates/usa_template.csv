@@ -1,39 +1,40 @@
-ITEM,PRICE,SALES
-Kibbles XS, 25, 0
-Kibbles S, 25, 0
-Kibbles M, 25, 0
-Kibbles L, 25, 0
-Kibbles XL, 25, 0
-Kibbles XXL, 25, 0
-Kibbles XXXL, 25, 0
-Profanar La Tumba XS, 25, 0
-Profanar La Tumba S, 25, 0
-Profanar La Tumba M, 25, 0
-Profanar La Tumba L, 25, 0
-Profanar La Tumba XL, 25, 0
-Profanar La Tumba XXL, 25, 0
-Profanar La Tumba XXXL, 25, 0
-Pasadena 1995 XS, 25, 0
-Pasadena 1995 S, 25, 0
-Pasadena 1995 M, 25, 0
-Pasadena 1995 L, 25, 0
-Pasadena 1995 XL, 25, 0
-Pasadena 1995 XXL, 25, 0
-Pasadena 1995 XXXL, 25, 0
-Other Bands Play CD, 15, 0
-Into Gay Pride CD, 15, 0
-A Knight At The Opera CD, 15, 0
-Tourmentone CD, 15, 0
-Stairway to Valhalla CD, 15, 0
-Italian Folk Metal CD, 15, 0
-Dislike to False Metal CD, 15, 0
-Other Bands Play LP, 20, 0
-Into Gay Pride LP, 20, 0
-A Knight At The Opera 2LP, 20, 0
-Tourmentone LP, 20, 0
-Stairway to Valhalla 2LP, 25, 0
-Italian Folk Metal LP, 20, 0
-Dislike to False Metal LP, 25, 0
-Patch LOGO, 10, 0
-Sticker BOOMER, 6, 0
-Bag CTHULHU, 12, 0
+ITEM,PRICE,SALES,CLASS
+Kibbles XS, 25, 0,TSHIRT
+Kibbles S, 25, 0,TSHIRT
+Kibbles M, 25, 0,TSHIRT
+Kibbles L, 25, 0,TSHIRT
+Kibbles XL, 25, 0,TSHIRT
+Kibbles XXL, 25, 0,TSHIRT
+Kibbles XXXL, 25, 0,TSHIRT
+Profanar LaTumba XS, 25, 0,TSHIRT
+Profanar LaTumba S, 25, 0,TSHIRT
+Profanar LaTumba M, 25, 0,TSHIRT
+Profanar LaTumba L, 25, 0,TSHIRT
+Profanar LaTumba XL, 25, 0,TSHIRT
+Profanar LaTumba XXL, 25, 0,TSHIRT
+Profanar LaTumba XXXL, 25, 0,TSHIRT
+Pasadena 1995 XS, 25, 0,TSHIRT
+Pasadena 1995 S, 25, 0,TSHIRT
+Pasadena 1995 M, 25, 0,TSHIRT
+Pasadena 1995 L, 25, 0,TSHIRT
+Pasadena 1995 XL, 25, 0,TSHIRT
+Pasadena 1995 XXL, 25, 0,TSHIRT
+Pasadena 1995 XXXL, 25, 0,TSHIRT
+Other Bands Play CD, 15, 0,MUSIC
+Into Gay Pride CD, 15, 0,MUSIC
+A Knight At The Opera CD, 15, 0,MUSIC
+Tourmentone CD, 15, 0,MUSIC
+Stairway to Valhalla 2CD, 20, 0,MUSIC
+Stairway to Valhalla CD, 15, 0,MUSIC
+Italian Folk Metal CD, 20, 0,MUSIC
+Dislike to False Metal CD, 20, 0,MUSIC
+Other Bands Play LP, 20, 0,MUSIC
+Into Gay Pride LP, 20, 0,MUSIC
+A Knight At The Opera 2LP, 30, 0,MUSIC
+Tourmentone LP, 20, 0,MUSIC
+Stairway to Valhalla 2LP, 40, 0,MUSIC
+Italian Folk Metal LP, 30, 0,MUSIC
+Dislike to False Metal LP, 30, 0,MUSIC
+Patch LOGO, 10, 0,GADGET
+Sticker BOOMER, 6, 0,GADGET
+Bag CTHULHU, 12, 0,GADGET
