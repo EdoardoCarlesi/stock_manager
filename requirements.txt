@@ -1,4 +1,9 @@
 streamlit
+toga-android
+colosseum
+beeware
+briefcase
+toga
 state
 airportsdata
 openrouteservice

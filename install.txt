@@ -1,0 +1,3 @@
+apt-get install sox ffmpeg libcairo2 libcairo2-dev gobject-introspection
+sudo apt install libgirepository1.0-dev
+python3 -m pip install briefcase
